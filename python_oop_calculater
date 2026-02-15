@@ -1,0 +1,36 @@
+class Calci():
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def add(self):
+        print("sum:",self.x+self.y)
+        
+    def sub(self):
+        print("sub:",self.x-self.y)
+        
+    def mul(self):
+        print("Mul:",self.x*self.y)
+        
+    def div(self):
+        print("Div:",self.x/self.y)
+
+while True:
+    a=int(input("Enter the first number:"))
+    b=int(input("Enter the second number:"))
+    op=input("Enter the operators(+ - / *):")
+    s1=Calci(a,b)
+    if op=="+":
+        s1.add()
+    elif op=="-":
+        s1.sub()
+    elif op=="*":
+        s1.mul()
+    elif op=="/":
+        s1.div()
+    else:
+        print("Invalid op")
+    ch=input("Do you want to continue(yes/no):")
+    if ch=="yes" or ch=="YES":
+        continue
+    elif ch=="no" or ch=="NO":
+        break
